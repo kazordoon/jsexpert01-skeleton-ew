@@ -7,7 +7,8 @@ function convert() {
     -c:a aac -ac 2 \
     -vcodec h264 -acodec aac \
     -ab 128k \
-    -movflags frag_keyframe+empty_moov+default_default_moof \
+    -movflags frag_keyframe+empty_moov+default_base_moof \
+    -b:v $3 \
     -maxrate $3 \
     -bufsize $4 \
     -vf "scale=$5" \
